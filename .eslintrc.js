@@ -48,5 +48,6 @@ module.exports = {
         "asyncArrow": "always",
     }],
     "quotes": ["error", "double"],
+    "prefer-const": "off",
   },
 };

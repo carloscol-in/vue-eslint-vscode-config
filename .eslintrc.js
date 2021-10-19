@@ -5,12 +5,14 @@ module.exports = {
   },
   extends: [
     "plugin:vue/vue3-essential",
-    "@vue/airbnb",
+    "@vue/standard",
   ],
   parserOptions: {
     parser: "babel-eslint",
   },
-  plugins: ["import"],
+  plugins: [
+    "import", // import resolver plugin
+  ],
   settings: {
     "import/resolver": {
       alias: {
@@ -29,10 +31,22 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "vue/html-self-closing": "off",
-    quotes: [2, "double", { avoidEscape: true }],
-    indent: ["error", 2], // space indentation
-    // "indent": ["error", "tab"] // tabbed indentation
+    "indent": ["error", 2], // space indentation
     "max-len": "off", // disables line length check
     "vue/comment-directive": 0,
+    "comma-dangle": ["error", {
+        "arrays": "always",
+        "objects": "always",
+        "imports": "always",
+        "exports": "always",
+        "functions": "never"
+    }],
+    "no-unused-vars": "off",
+    "space-before-function-paren": ["error", {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always",
+    }],
+    "quotes": ["error", "double"],
   },
 };

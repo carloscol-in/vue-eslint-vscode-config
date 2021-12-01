@@ -38,6 +38,7 @@ You can install these extensions by copying the next lines, one by one, on **VS 
 ```
 ext install dbaeumer.vscode-eslint
 ext install octref.vetur
+ext install EditorConfig.EditorConfig
 ```
 
 If no changes are reflected, try restarting **VS Code**.
